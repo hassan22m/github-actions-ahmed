@@ -21,5 +21,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5.0.0 # clone the repository code to the runner
 
+      - name: install dependencies
+        run: npm install
+
       - name: Run tests
         run: npm test
