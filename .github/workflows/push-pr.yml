@@ -20,8 +20,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5.0.0
 
-      - name: install dependencies
-        run: npm install
-
       - name: Run tests
         run: npm test
