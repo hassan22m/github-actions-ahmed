@@ -2,12 +2,11 @@ name: Push Pull Request Workflow
 
 on:
   push:
-    # Trigger on pushes to main and any release branches only the src/ directory
     branches:
       - main
-      - "release/**" # Trigger on any branch starting with 'release/'
+      - "release/**"
     paths:
-      - "src/**" # Trigger only for changes in the src directory
+      - "src/**"
 
   pull_request:
     branches:
@@ -19,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5.0.0 # clone the repository code to the runner
+        uses: actions/checkout@v5.0.0
 
       - name: install dependencies
         run: npm install
