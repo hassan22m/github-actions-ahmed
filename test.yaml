@@ -1,4 +1,61 @@
-#this is a test yaml file
-name: Test
-version: 1.0
-description: This is a test YAML file for demonstration purposes.
+# This line defines the username
+name: Hassan
+age: 22
+salary: 6000
+username: 7sn280
+is_active: true
+employment_date: 12-09-2025
+direct_manager: Waleed
+skills:
+  - Python
+  - JavaScript
+  - SQL
+  - HTML/CSS
+  - Git
+  - Docker
+  - Kubernetes
+  - AWS
+  - Machine Learning
+  - Data Analysis
+serial_number: "0000-12345-ABCDE"
+regex: "^[a-zA-Z0-9]+$" # Alphanumeric characters only
+path: "C:\\Users\\Hassan\\Documents" # Using double backslashes for Windows paths
+quote: 'He said, "Hello, World!"' # Using single quotes to avoid escaping
+bio: |
+  Hassan is a software developer with a passion for creating efficient and scalable applications.
+  He has experience in both frontend and backend development, 
+  and enjoys working with modern web technologies.
+  In his free time, he contributes to open source projects and explores new programming languages.
+
+# the collection ether a map or a list
+# this is collection of maps
+employees:
+  - name: Hassan
+    age: 22
+    skills:
+      - Python
+      - JavaScript
+      - SQL
+  - name: Ahmed
+    age: 25
+    skills:
+      - Java
+      - C#
+      - AWS
+
+servers:
+  production:
+    - host: prod.example.com
+      port: 443
+      ssl: true
+  staging:
+    - host: staging.example.com
+      port: 80
+      ssl: false
+    - host: staging2.example.com
+      port: 8080
+      ssl: true
+  development:
+    - host: dev.example.com
+      port: 8080
+      ssl: false
