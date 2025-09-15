@@ -1,0 +1,10 @@
+on: 
+  workflow_dispatch:
+
+jobs:
+  expressions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print a message 
+        run: echo "The job is running" 
+        if: ${{ github.event_name == 'push' }}
