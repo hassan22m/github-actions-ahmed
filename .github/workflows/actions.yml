@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  job-1:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false # if one of the jobs fail complete
+      max-parallel: 3 # run max 2 jobs in parallel
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [16.x, 18.x, 20.x]
+    steps:
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
