@@ -1,3 +1,5 @@
+name: actions workflow
+
 on:
   workflow_dispatch:
 
