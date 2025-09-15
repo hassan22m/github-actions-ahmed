@@ -1,14 +1,16 @@
 name: commands workflow
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # 👈 Workflow runs only when triggered manually.
 
 jobs:
   example:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 👈 Runs on a Linux GitHub-hosted runner.
     steps:
-      - name: set API key
-        run: echo "API_KEY=12345" >> $GITHUB_ENV # 👈 writes to the env file
-
-      - name: use API key
-        run: echo "Using API key $API_KEY" # 👈 can now access API_KEY
+      - name: check if a file exists
+        run: |
+          if [ -f "config.yaml" ]; then
+            echo "::debug::config.yaml"
+          else
+            echo "::error::config.yaml is missing"
+          fi
